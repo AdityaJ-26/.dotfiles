@@ -1,4 +1,4 @@
-### Linux (Ubunutu) dotfiles setup.
+## Linux (Ubunutu) dotfiles setup.
 ### How to add files
 ```
 cd ~
