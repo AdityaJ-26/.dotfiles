@@ -3,7 +3,7 @@
 ```
 cd ~
 git clone https://github.com/AdityaJ-26/.dotfiles.git .dotfiles
-# remote the remote repo and add your own version control
+# remove the remote repo and add your own version control
 # or fork the repo
 cp -r -f -v filename .dotfiles/filename
 # -r copies all files recursively, -f force copies all files, -v (optional) displays the detail of file copying.
@@ -16,5 +16,6 @@ git push origin main
 ```
 cd ~
 git clone https://github.com/AdityaJ-26/.dotfiles.git .dotfiles
+cd .dotfiles
 bash ./load.sh
 ```
