@@ -26,11 +26,9 @@ set nowrap
 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
 
-" Show partial command you type in the last line of the screen.
+" Show partial command you type in the second last line of the screen.
 set showcmd
-
-" Show the mode you are on the last line.
-set showmode
+set cmdheight=1
 
 " do not store backup files
 set nobackup
@@ -39,11 +37,32 @@ set nobackup
 set wildmenu
 
 " Make wildmenu behave like similar to Bash completion.
-set wildmode=list:longest
+set wildmode=longest:full,full
 
 " STATUS LINE ------------------------------------------------------------ {{{
 " Clear status line when vimrc is reloaded.
 set statusline=
+
+" function to get full display mode instead of characters
+function! Mode()
+    let modes = {
+        \ 'n':'NORMAL',
+        \ 'i':'INSERT',
+        \ 'R':'REPLACE',
+        \ 'v':'VISUAL',
+        \ 'V':'V-LINE',
+        \ "\<C-v>":'V-BLOCK',
+        \ 'c':'COMMAND',
+        \ 't':'TERMINAL'
+        \ }
+	return get(modes, mode(), mode())
+endfunction
+
+" Display mode in status line
+set statusline+=\ %{Mode()}
+
+" seperator
+set statusline+=\ |
 
 " Status line left side | %F : display full path of file, %M : modified flag
 " (file saved or not), %Y : type of file in buffer, %R : read only flag
@@ -53,8 +72,8 @@ set statusline+=\ %F\ %M\ %Y\ %R
 set statusline+=%=
 
 " Status line right side | %l : row no, %c : column no.
-set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
+set statusline+=\ row:%l\ col:%c\ %p%%
 
-" Show the status on the second to last line.
+" Show the status on the last line.
  set laststatus=2
 "
