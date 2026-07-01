@@ -4,9 +4,11 @@ set number
 " Enable syntax highlighting
 syntax on
 
-" Set tabwidth to 4 and convert tab to space
+" Set tabwidth to 4, and do not use space for tab, auto indent width to 4, press tab for 4 space
 set tabstop=4
-set expandtab
+set noexpandtab
+set shiftwidth=4
+set softtabstop=4
 
 " Auto indentation
 set autoindent
