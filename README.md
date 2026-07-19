@@ -22,8 +22,8 @@ git clone https://github.com/AdityaJ-26/.dotfiles.git .dotfiles
 cd .dotfiles
 bash ./load.sh
 
-# loading vim configurations
+# loading configurations
 vim
-# inside vim write command after pressing :
+# in program write command after pressing :
 source ~/.vimrc
 ```
