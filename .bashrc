@@ -115,3 +115,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+. "$HOME/.local/bin/env"
+
+
+
+# customs
+
+# don't display current working directory, instead display username hostname >
+PS1='\u@\h ❯ '
