@@ -78,5 +78,7 @@ set statusline+=%=
 set statusline+=\ row:%l\ col:%c\ %p%%
 
 " Show the status on the last line.
- set laststatus=2
-"
+set laststatus=2
+
+# set comment color to green
+highlight Comment ctermfg=Green guifg=Green
