@@ -26,3 +26,9 @@ unset rc
 
 # change format
 PS1='[\[\e[1;32m\]\u\[\e[0m\] \W] > '
+
+# Enable 256-color support
+export TERM=xterm-256color
+
+# Force true color support (for modern terminals)
+export COLORTERM=truecolor
